@@ -26,7 +26,7 @@ echo "Déplacement dans Dropbox..."
 cp /home/$USER/.temp/sourceslists.tar.gz /home/$USER/Dropbox/Public/
 cp /home/$USER/.temp/sourceslists.tar.gz /home/$USER/Documents/SI_Documentation/Linux/Configuration/Desktop
 
-echo "Suppression de la copie..."
+echo "Nettoyage..."
 rm -rf /home/$USER/.temp
 
 echo "========== Terminé ==========\n"
