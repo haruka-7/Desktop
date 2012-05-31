@@ -1,3 +1,13 @@
+#---------------------------------------
+# Terminator configuration file
+#---------------------------------------
+# 31/05/2012
+# version : 1.0
+# licence : Creative Commons (CC-by-nc)
+#
+# written par Pedro CADETE - http://p3ter.fr 
+#
+
 [global_config]
   handle_size = 1
 [keybindings]
