@@ -1,0 +1,41 @@
+### BEGIN INIT INFO
+# Provides: vnc
+# Required-Start:
+# Required-Stop:  
+# Default-Start:     2 3 4 5
+# Default-Stop:      0 1 6
+### END INIT INFO
+
+#!/bin/sh
+#---------------------------------------
+# Lancer automatiquement VNC
+#---------------------------------------
+# 23/04/2011
+# version : 1.0
+# licence : Creative Commons (CC-by-nc)
+#
+# written par Pedro CADETE - http://p3ter.fr 
+#
+
+PATH=/bin:/sbin:/usr/bin:/usr/sbin
+
+vnc4server
+
+#######################
+case "$1" in
+	start|restart)
+		vnc4server -kill :1
+		echo "Stop display 1 : done"
+		vnc4server
+		echo -n "Start : done"
+	;;
+	stop)
+		vnc4server -kill :1 
+		echo "Stop display 1 : done"
+		;;
+	*)
+		echo "Usage: $0 {start|stop|restart}"
+		exit 1
+	;;
+esac
+exit 0
