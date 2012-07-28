@@ -1,4 +1,13 @@
 #!/bin/sh
+#----------------------------------------
+# Lancer une session Gnome avec VNC
+#----------------------------------------
+# 28/07/2011
+# version : 1.0
+# licence : Creative Commons (CC-by-nc)
+#
+# written par Pedro CADETE - http://p3ter.fr 
+# tested with Debian Squeeze
 
 # Uncomment the following two lines for normal desktop:
 unset SESSION_MANAGER
