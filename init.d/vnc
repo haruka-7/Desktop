@@ -7,35 +7,31 @@
 ### END INIT INFO
 
 #!/bin/sh
-#---------------------------------------
-# Lancer automatiquement VNC
-#---------------------------------------
-# 23/04/2011
-# version : 1.0
+#----------------------------------------
+# Lancer automatiquement VNC sur Raspbian
+#----------------------------------------
+# 28/07/2011
+# version : 2.0
 # licence : Creative Commons (CC-by-nc)
 #
 # written par Pedro CADETE - http://p3ter.fr 
 #
 
-PATH=/bin:/sbin:/usr/bin:/usr/sbin
+# Set the VNCUSER variable to the name of the user which you want to use the xstartup file
+VNCUSER='pi'
 
-vnc4server
-
-#######################
 case "$1" in
-	start|restart)
-		vnc4server -kill :1
-		echo "Stop display 1 : done"
-		vnc4server
-		echo -n "Start : done"
-	;;
+	start)
+ 		su $VNCUSER -c 'vncserver :1 -geometry 1366x768 -depth 24'
+		echo "Starting TightVNC server for the user $VNCUSER "
+		;;
 	stop)
-		vnc4server -kill :1 
-		echo "Stop display 1 : done"
+		pkill Xtightvnc
+		echo "Tightvncserver stopped"
 		;;
 	*)
-		echo "Usage: $0 {start|stop|restart}"
+		echo "Usage: /etc/init.d/vnc {start|stop}"
 		exit 1
-	;;
-esac
+		;;
+		esac
 exit 0
