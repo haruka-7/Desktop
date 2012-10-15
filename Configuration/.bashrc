@@ -102,6 +102,7 @@ alias df='df -h'
 alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
+alias wol fractal='wakeonlan 90:e6:ba:4f:7f:38'
 
 ## -------
 ## History
