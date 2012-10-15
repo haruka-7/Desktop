@@ -5,7 +5,7 @@
 # version : 1.0
 # licence : Creative Commons (CC-by-nc)
 #
-# written par Pedro CADETE - http://p3ter.fr
+# write by Pedro CADETE - http://p3ter.fr
 # fork from Nicolas Hennion - http://blog.nicolargo.com/
 #
 # tested with Ubuntu and Debian Squeeze
@@ -102,7 +102,7 @@ alias df='df -h'
 alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
-alias wol fractal='wakeonlan 90:e6:ba:4f:7f:38'
+alias wol-fractal='wakeonlan 90:e6:ba:4f:7f:38'
 
 ## -------
 ## History
